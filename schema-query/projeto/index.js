@@ -53,6 +53,9 @@ const typeDefs = gql`
     numeroDaMegaSena: [Int!]!
 
     usuarios: [Usuario]
+
+    # consulta com parametros
+    usuario(id: ID): Usuario
   }
 `;
 
@@ -88,6 +91,15 @@ const resolvers = {
 
     usuarios() {
       return usuarios;
+    },
+
+    // Resolver para busca com parametros
+    //Utilizando destructiring
+    usuario(_, { id }) {
+      // Fazendo a chamada de todos os args que virem na consulta
+      // usuario(_, args) {
+      const selecionados = usuarios.filter(u => u.id == id);
+      return selecionados ? selecionados[0] : null;
     },
 
     ola() {
