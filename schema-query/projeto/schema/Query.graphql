@@ -1,0 +1,21 @@
+  # Aqui é os pontos de entrada da API
+  type Query {
+    ola: String
+    horaAtual: Date
+    # horaAtual: String
+    usuarioLogado: Usuario
+    produtosEmDestaque: Produto
+    # ---------------------------------------------------------------------------------------------
+    # Duas exclamações obrigatóriamente será retornado um array de inteiros e obrigatóriamente
+    # não poderá estar vazio
+    numeroDaMegaSena: [Int!]!
+
+    usuarios: [Usuario]
+
+    # consulta com parametros
+    usuario(id: ID): Usuario
+
+    # Consulta para perfis
+    perfis: [Perfil]
+    perfil(id: Int): Perfil
+  }
