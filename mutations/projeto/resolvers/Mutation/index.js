@@ -1,5 +1,7 @@
-const usuario = require("./Usuario");
+const Usuario = require("./Usuario");
+const Perfil = require("./Perfil");
 
 module.exports = {
-  ...usuario
+  ...Usuario,
+  ...Perfil
 };
