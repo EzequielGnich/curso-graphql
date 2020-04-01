@@ -20,7 +20,7 @@ const mutations = {
       if (!dados.perfis || !dados.perfis.length) {
         dados.perfis = [
           {
-            nome: "comum"
+            nome: "admin"
           }
         ];
       }
