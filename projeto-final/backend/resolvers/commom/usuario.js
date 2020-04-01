@@ -17,6 +17,8 @@ module.exports = {
 
     const token = jwt.encode(usuarioInfo, process.env.AUTH_SECRET);
 
+    delete usuarioInfo.perfis;
+
     return {
       ...usuarioInfo,
       token
