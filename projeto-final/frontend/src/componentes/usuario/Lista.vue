@@ -17,7 +17,7 @@
             <td>{{ props.item.email }}</td>
             <td>
               {{ props.item.perfis
-              .map(p => p.nome)
+              .map(p => p.rotulo)
               .join(', ') }}
             </td>
           </template>
