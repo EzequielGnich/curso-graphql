@@ -18,7 +18,6 @@ const sql = `
 
 const getUsuario = async nomePerfil => {
   const res = await db.raw(sql, { nomePerfil });
-  console.log(res);
   return res ? res[0][0] : null;
 };
 
